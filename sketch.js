@@ -30,6 +30,10 @@ function draw() {
 
 function mouseClicked() {
   op = [Math.floor(mouseX * tilemap.res[0] / screenSize[0]), Math.floor(mouseY * tilemap.res[1] / screenSize[1])];
+  if (op[0] < 0 || op[0] >= titlemap.res[0])
+    return;
+  if (op[1] < 0 || op[1] >= tilemap.res[1])
+    return;
   tilemap.tilemap[op[0]][op[1]] = selected;
 }
 
