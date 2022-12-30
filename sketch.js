@@ -44,6 +44,9 @@ function keyPressed() {
     case 87: // w to export to console where you can copy it
       console.log(JSON.stringify(tilemap.tilemap));
       break;
+    case 83: // press s to select a specific tile
+      selected = Number(prompt("Enter the tile you want: "))
+      break;
   }
   selected %= tilemap.tiles.length;
 }
